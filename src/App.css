@@ -1,4 +1,9 @@
 .todoDiv
 {
   background-color: lightblue;
+  text-align: center;
+}
+ul.ab
+{
+  list-style-type: none;
 }

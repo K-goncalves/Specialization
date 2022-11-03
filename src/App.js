@@ -14,7 +14,7 @@ function App() {
     //Add todo to list
     setList([...list, newTodo]);
 
-    //Clear box
+    //Clear box for new todo
     setInput("");
   };
 
@@ -29,16 +29,17 @@ function App() {
 
   return (
     <div className="todoDiv">
-      <h1>Todo List For Today</h1>
+      <h1>Todo List</h1>
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
       <button onClick={() => addTodo(input)}>Add New Item</button>
-      <ul>
+      <ul className="ab">
         {list.map((todo) => (
           <li key={todo.id}>
+            <input type="checkbox" />
             {todo.todo}
             <button onClick={() => deleteTodo(todo.id)}>&times;</button>
           </li>
