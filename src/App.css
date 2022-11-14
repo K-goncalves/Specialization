@@ -1,9 +1,12 @@
 .todoDiv
 {
-  background-color: lightblue;
   text-align: center;
 }
 ul.ab
 {
   list-style-type: none;
+}
+
+.btn_edit{
+  margin-right: auto;
 }
