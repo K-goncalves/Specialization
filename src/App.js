@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./App.css";
 
 function App() {
@@ -55,6 +56,14 @@ function App() {
     setEditText("");
   }
 
+  const handleAddItem = async () => {
+    try {
+      await axios.post("/item", "isso é um teste");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="todoDiv">
       <h1>Todo List</h1>
@@ -65,6 +74,7 @@ function App() {
           onChange={(e) => setInput(e.target.value)}
         />
         <button onClick={() => addTodo(input)}>Add New Item</button>
+        <button onClick={handleAddItem}>TEST</button>
       </form>
       <ul className="ab">
         {list.map((todo) => (
